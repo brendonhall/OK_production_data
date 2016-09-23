@@ -11,7 +11,8 @@ plt.close('all')
 data_dir = '~/Desktop/DATA/Projects/OK_production_data/historical/'
 
 # generate a list of years that will be used to form filenames
-years = np.arange(1988, 2016, 1)
+#years = np.arange(1988, 2016, 1)
+years = np.arange(1988, 1990, 1)
 
 # The data for 1994 is missing, so drop it from the list
 years = np.delete(years, np.where(years==1994))
@@ -19,6 +20,7 @@ years = np.delete(years, np.where(years==1994))
 #initialize list that will hold annual production data frames
 data_frames = []
 location_data_list = []
+all_data_test = pd.DataFrame()
 
 for year in years:
     
